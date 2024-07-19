@@ -1,0 +1,8 @@
+﻿<maui:MauiWinUIApplication
+    x:Class="Expense_Controll.WinUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:maui="using:Microsoft.Maui"
+    xmlns:local="using:Expense_Controll.WinUI">
+
+</maui:MauiWinUIApplication>
