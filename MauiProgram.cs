@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace Expense_Controll
+namespace ExpenseControll
 {
     public static class MauiProgram
     {

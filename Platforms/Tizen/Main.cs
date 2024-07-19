@@ -2,7 +2,7 @@ using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 using System;
 
-namespace Expense_Controll
+namespace ExpenseControll
 {
     internal class Program : MauiApplication
     {

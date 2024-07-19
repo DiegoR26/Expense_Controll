@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Expense_Controll
+namespace ExpenseControll
 {
     public class Program
     {

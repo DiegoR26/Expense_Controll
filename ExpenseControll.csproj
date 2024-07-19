@@ -14,17 +14,17 @@
 		<!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
 
 		<OutputType>Exe</OutputType>
-		<RootNamespace>Expense_Controll</RootNamespace>
+		<RootNamespace>ExpenseControll</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>Expense_Controll</ApplicationTitle>
+		<ApplicationTitle>ExpenseControll</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.expense_controll</ApplicationId>
+		<ApplicationId>com.companyname.expensecontroll</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>

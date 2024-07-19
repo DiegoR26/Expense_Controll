@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace Expense_Controll
+namespace ExpenseControll
 {
     [Application]
     public class MainApplication : MauiApplication

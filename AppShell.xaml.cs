@@ -1,4 +1,4 @@
-﻿namespace Expense_Controll
+﻿namespace ExpenseControll
 {
     public partial class AppShell : Shell
     {

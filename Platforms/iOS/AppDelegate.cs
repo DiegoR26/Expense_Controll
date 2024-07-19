@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Expense_Controll
+namespace ExpenseControll
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate
