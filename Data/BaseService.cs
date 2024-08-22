@@ -4,6 +4,8 @@ namespace Data
 {
     public abstract class BaseService<T> where T : new()
     {
+        private string DBName = "ExpenseDB.db3";
+        string dbPath;
         protected SQLiteAsyncConnection _dbConnection;
 
         public BaseService()
@@ -11,14 +13,21 @@ namespace Data
             SetUpDb();
         }
 
+        public string GetDBPath()
+        {
+            return dbPath;
+        }
+
         private void SetUpDb()
         {
             if (_dbConnection == null)
             {
-                string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ExpenseDB.db3");
+                dbPath = Path.Combine(FileSystem.AppDataDirectory, DBName);
                 _dbConnection = new SQLiteAsyncConnection(dbPath);
 
                 _dbConnection.CreateTableAsync<T>().Wait();
+
+                Console.WriteLine(dbPath);
             }
         }
 
