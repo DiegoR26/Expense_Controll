@@ -65,7 +65,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="View\Pages\" />
+	  <MauiXaml Update="View\Pages\NewContent1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

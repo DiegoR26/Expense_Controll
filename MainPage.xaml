@@ -10,13 +10,20 @@
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
 
-        <Rectangle Grid.Row="0" Fill="Aqua"/>
-        <Rectangle Grid.Row="1" Fill="Aqua"/>
+        <Rectangle Grid.Row="0" Fill="Green"/>
+
+        <Frame Grid.Row="1" x:Name="ContentFrame"/>
 
         <Grid Grid.Row="2">
-            
-        </Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
+            <Button Text="è" Clicked="Button_Clicked"/>
+        </Grid>
 
     </Grid>
 
