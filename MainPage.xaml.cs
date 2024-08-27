@@ -20,7 +20,7 @@ namespace ExpenseControll
 
         private async void BtTest_Clicked(object sender, EventArgs e)
         {
-            await transactionService.InsertAsync(new Model.Transaction
+            await transactionService.InsertAsync(new Transaction
             {
                 TransactionType = 0,
                 LogDate = DateTime.Now,
