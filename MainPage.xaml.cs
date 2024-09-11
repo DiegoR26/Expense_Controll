@@ -9,7 +9,18 @@ namespace ExpenseControll
         public MainPage()
         {
             InitializeComponent();
+           
         }
+
+        private void MonthSelector (object sender, EventArgs e)
+        {
+            DisplayAlert("Alert", "O botão foi clicado!", "OK");
+
+
+        }
+
+
+
 
         private void Button_Clicked(object sender, EventArgs e)
         {
