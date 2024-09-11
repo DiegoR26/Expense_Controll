@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fontAwesome="clr-namespace:Model.FontIcons"
              x:Class="ExpenseControll.MainPage">
 
     <Grid>
@@ -59,7 +60,9 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button Text="è" Clicked="Button_Clicked"/>
+            <Button Grid.Column="0" Text="{x:Static fontAwesome:FABrandIcons.JediOrder}" FontFamily="FontAwesomeBrands" FontSize="Large" TextColor="White" Clicked="Button_Clicked"/>
+            <Button Grid.Column="1" Text="{x:Static fontAwesome:FARegularIcons.Hourglass}" FontFamily="FontAwesomeRegular" FontSize="Large" TextColor="White" Clicked="Button_Clicked"/>
+            <Button Grid.Column="2" Text="{x:Static fontAwesome:FASolidIcons.House}" FontFamily="FontAwesomeSolid" FontSize="Large" TextColor="White" Clicked="Button_Clicked"/>
         </Grid>
 
     </Grid>

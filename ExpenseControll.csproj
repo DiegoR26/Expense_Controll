@@ -57,6 +57,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\FontAwesomeBrands.otf" />
+	  <None Remove="Resources\Fonts\FontAwesomeRegular.otf" />
+	  <None Remove="Resources\Fonts\FontAwesomeSolid.otf" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
