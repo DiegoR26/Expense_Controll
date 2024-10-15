@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpenseControll.View.Pages.ExpenseTracker">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <!-- Primeira Linha -->
+        <Grid Grid.Row="0" Background="#0ca789">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Label 
+                Grid.Row="0"
+                Grid.Column="0"
+                Padding="2"
+                Text="Controle de saldos"
+                FontSize="Subtitle"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"/>
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Receitas"
+                FontSize="Small"
+                FontAttributes="Bold"/>
+            <Button 
+                Grid.Row="2"
+                Grid.Column="1"
+                Background="#ebf5ee"
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                CornerRadius="0"
+                WidthRequest="140"
+                Text="+ Categoria"
+                TextColor="#0ca789"
+                FontSize="10"
+                BorderColor="#0ca789"
+                BorderWidth="6"/>
+            <!-- Esse border é gambiarra pra ajustar o tamanho do botão, tem que ver certinho como corrigir -->
+
+
+
+        </Grid>
+
+        <Label Grid.Row="1" HorizontalOptions="Center" Text="Linha 2" TextColor="Black"/>
+        <Button Grid.Row="2" Text="Voltar ao início" Clicked="Button_Clicked"/>
+        <Label Grid.Row="3" HorizontalOptions="Center" Text="Linha 4" TextColor="Black"/>
+        
+    </Grid>
+ 
+        
+ 
+</ContentView>

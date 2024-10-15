@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:fontAwesome="clr-namespace:Model.FontIcons"
-             x:Class="ExpenseControll.MainPage">
+             x:Class="ExpenseControll.MainPage"
+             BackgroundColor="#ebf5ee">
+            
 
     <Grid>
         <Grid.RowDefinitions>
@@ -10,6 +12,7 @@
             <RowDefinition/>
             <RowDefinition Height="120"/>
         </Grid.RowDefinitions>
+
 
         <Rectangle Grid.Row="0" Fill="#0ca789"/>
         <Grid Grid.Row="0">
@@ -25,8 +28,8 @@
                 Text="Month"
                 FontSize="20"
                 BackgroundColor="Transparent"
-                TextColor="White"
-                BorderColor="GhostWhite"
+                TextColor="#ebf5ee"
+                BorderColor="#ebf5ee"
                 BorderWidth="1"
                 CornerRadius="5"
                 HorizontalOptions="Center"
@@ -43,14 +46,19 @@
                 CornerRadius="50"
                 BorderColor="GhostWhite"
                 BackgroundColor="Transparent"
-                Padding="0"
-               >
+                Padding="0">
                 <Grid x:Name="frameContentGrid"/>
 
             </Frame>
         </Grid>
 
-        <Frame Grid.Row="1" x:Name="ContentFrame"/>
+        <Frame 
+            Grid.Row="1"
+            x:Name="ContentFrame"
+            Padding="0"
+            BorderColor="Transparent"
+            Background="#ebf5ee"
+            CornerRadius="0"/>
 
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -61,7 +69,7 @@
             </Grid.ColumnDefinitions>
 
             <Button Grid.Column="0" Text="{x:Static fontAwesome:FABrandIcons.JediOrder}" FontFamily="FontAwesomeBrands" FontSize="Large" TextColor="White" Clicked="Button_Clicked"/>
-            <Button Grid.Column="1" Text="{x:Static fontAwesome:FARegularIcons.Hourglass}" FontFamily="FontAwesomeRegular" FontSize="Large" TextColor="White" Clicked="Button_Clicked"/>
+            <Button Grid.Column="1" Text="{x:Static fontAwesome:FARegularIcons.Hourglass}" FontFamily="FontAwesomeRegular" FontSize="Large" TextColor="White" Clicked="ExpenseTrackerClicked"/>
             <Button Grid.Column="2" Text="{x:Static fontAwesome:FASolidIcons.House}" FontFamily="FontAwesomeSolid" FontSize="Large" TextColor="White" Clicked="Button_Clicked"/>
         </Grid>
 
