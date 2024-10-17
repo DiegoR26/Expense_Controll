@@ -7,26 +7,25 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <!-- Primeira Linha -->
-        <Grid Grid.Row="0" Background="#0ca789">
+        <Grid Grid.Row="0" Background="#0ca789" Padding="15,2,15,5">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             
             <Label 
                 Grid.Row="0"
                 Grid.Column="0"
-                Padding="2"
                 Text="Controle de saldos"
                 FontSize="Subtitle"
                 FontAttributes="Bold"
@@ -35,34 +34,177 @@
             <Label
                 Grid.Row="2"
                 Grid.Column="0"
+                VerticalTextAlignment="End"
                 Text="Receitas"
                 FontSize="Small"
                 FontAttributes="Bold"/>
             <Button 
                 Grid.Row="2"
                 Grid.Column="1"
+                HeightRequest="30"
+                MinimumHeightRequest="25"
+                WidthRequest="140"
+                CornerRadius="0"
+                Padding="0"
                 Background="#ebf5ee"
                 HorizontalOptions="End"
-                VerticalOptions="Center"
-                CornerRadius="0"
-                WidthRequest="140"
+                VerticalOptions="End"
                 Text="+ Categoria"
                 TextColor="#0ca789"
-                FontSize="10"
+                FontSize="15"
                 BorderColor="#0ca789"
-                BorderWidth="6"/>
+                BorderWidth="0"/>
             <!-- Esse border é gambiarra pra ajustar o tamanho do botão, tem que ver certinho como corrigir -->
+        </Grid>
+        
+        
+        
+        <!-- Segunda Linha -->
+        <Grid Grid.Row="1" BackgroundColor="Transparent" Padding="15,2,15,2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label 
+                Grid.Row="0" 
+                Grid.Column="0"
+                Text="Tipo" 
+                HorizontalOptions="Center" 
+                TextColor="Black" 
+                FontAttributes="Bold"/>  
+            <Label 
+                Grid.Row="0" 
+                Grid.Column="1"
+                Text="Real" 
+                HorizontalOptions="Center" 
+                TextColor="Black" 
+                FontAttributes="Bold"/>   
+            <Label 
+                Grid.Row="0" 
+                Grid.Column="2"
+                Text="Previsto" 
+                HorizontalOptions="Center" 
+                TextColor="LightGray" 
+                FontAttributes="Bold"/>   
+            
+            <Label 
+                Grid.Row="1" 
+                Grid.Column="0"
+                Text="Salário" 
+                HorizontalOptions="Start" 
+                TextColor="Black"/>            
+            <Label 
+                Grid.Row="1" 
+                Grid.Column="1"
+                Text="$$$" 
+                HorizontalOptions="Center" 
+                TextColor="Black"/>            
+            <Label 
+                Grid.Row="1" 
+                Grid.Column="2"
+                Text="$$$" 
+                HorizontalOptions="Center" 
+                TextColor="LightGray"/>
+            
+            <Label 
+                Grid.Row="2" 
+                Grid.Column="0"
+                Text="Vale Alimentação" 
+                HorizontalOptions="Start" 
+                TextColor="Black"/>            
+            <Label 
+                Grid.Row="2" 
+                Grid.Column="1"
+                Text="$$$" 
+                HorizontalOptions="Center" 
+                TextColor="Black"/>            
+            <Label 
+                Grid.Row="2" 
+                Grid.Column="2"
+                Text="$$$" 
+                HorizontalOptions="Center" 
+                TextColor="LightGray"/>
+            
+            <Label 
+                Grid.Row="3" 
+                Grid.Column="0"
+                Text="Extras" 
+                HorizontalOptions="Start" 
+                TextColor="Black"/>            
+            <Label 
+                Grid.Row="3" 
+                Grid.Column="1"
+                Text="$$$" 
+                HorizontalOptions="Center" 
+                TextColor="Black"/>            
+            <Label 
+                Grid.Row="3" 
+                Grid.Column="2"
+                Text="$$$" 
+                HorizontalOptions="Center" 
+                TextColor="LightGray" />
+            
+            
+
 
 
 
         </Grid>
 
-        <Label Grid.Row="1" HorizontalOptions="Center" Text="Linha 2" TextColor="Black"/>
-        <Button Grid.Row="2" Text="Voltar ao início" Clicked="Button_Clicked"/>
-        <Label Grid.Row="3" HorizontalOptions="Center" Text="Linha 4" TextColor="Black"/>
+        <Grid Grid.Row="2" BackgroundColor="#0ca789"  Padding="15,2,15,5">
+            
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                VerticalTextAlignment="End"
+                Text="Despesas"
+                FontSize="Small"
+                FontAttributes="Bold"/>
+            <Button 
+                Grid.Row="2"
+                Grid.Column="1"
+                HeightRequest="30"
+                MinimumHeightRequest="25"
+                WidthRequest="140"
+                CornerRadius="0"
+                Padding="0"
+                Background="#ebf5ee"
+                HorizontalOptions="End"
+                VerticalOptions="End"
+                Text="+ Categoria"
+                TextColor="#0ca789"
+                FontSize="15"
+                BorderColor="#0ca789"
+                BorderWidth="0"/>   
+
+
+        </Grid>
+
+
+        <Grid Grid.Row="3" BackgroundColor="Transparent"  Padding="15,2,15,5">
+
+            <ListView >
+                                    
+            </ListView>
+
+
+
+        </Grid>
+
+
         
     </Grid>
  
+    
         
  
 </ContentView>
