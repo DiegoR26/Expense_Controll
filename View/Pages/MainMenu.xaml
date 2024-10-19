@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fontAwesome="clr-namespace:Model.FontIcons"
+             x:Class="ExpenseControll.View.Pages.MainMenu">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="21*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" x:Name="FinancesDisplay" Background="#0ca789">
+            <Label Text="Finanças" VerticalOptions="Center" FontAttributes="Bold" Margin="0 0 0 10"/>
+        </Grid>
+
+        <ScrollView Grid.Row="1" x:Name="FinancesListDisplay" Background="#0ca789">
+            <HorizontalStackLayout x:Name="HtlFinances">
+                
+            </HorizontalStackLayout>
+        </ScrollView>
+
+        <Grid Grid.Row="2" x:Name="MovementsDisplay" Background="#0ca789">
+            <Label Text="Movimentação" VerticalOptions="Center" FontAttributes="Bold" Margin="0 0 0 10"/>
+        </Grid>
+
+        <ScrollView Grid.Row="3" x:Name="MovementsListDisplay">
+            <ListView x:Name="LvMovements"/>
+
+        </ScrollView>
+
+        <Grid Grid.Row="4" x:Name="LogsDisplay" Background="#0ca789" VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="20*"/>
+            </Grid.ColumnDefinitions>
+
+            <HorizontalStackLayout Grid.Column="0" VerticalOptions="Center">
+                <Label Text="Lançamentos" VerticalOptions="Center" FontAttributes="Bold" Margin="0 0 0 10"/>
+            </HorizontalStackLayout>
+
+            <Button Grid.Column="1" Text="{x:Static fontAwesome:FASolidIcons.Gear}" FontFamily="FontAwesomeSolid" FontSize="Small" TextColor="White"
+                    Background="Transparent" CornerRadius="0" MinimumHeightRequest="0"/>
+
+        </Grid>
+
+        <Grid Grid.Row="5" x:Name="LogBtsDisplay">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="80*"/>
+                <ColumnDefinition Width="10*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="80*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70*"/>
+                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="25*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50*"/>
+                            <ColumnDefinition Width="50*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <VerticalStackLayout Grid.Column="0">
+                            <Button Grid.Row="2" Text="Favorito 1" TextColor="#0ca789" Background="Transparent" BorderWidth="1" BorderColor="#0ca789" 
+                                    CornerRadius="0" MinimumHeightRequest="0" Margin="2"/>
+                            <Button Grid.Row="2" Text="Favorito 3" TextColor="#0ca789" Background="Transparent" BorderWidth="1" BorderColor="#0ca789" 
+                                    CornerRadius="0" MinimumHeightRequest="0" Margin="2"/>
+                            <Button Grid.Row="2" Text="Favorito 5" TextColor="#0ca789" Background="Transparent" BorderWidth="1" BorderColor="#0ca789" 
+                                    CornerRadius="0" MinimumHeightRequest="0" Margin="2"/>
+                        </VerticalStackLayout>
+
+                        <VerticalStackLayout Grid.Column="1">
+                            <Button Grid.Row="2" Text="Favorito 2" TextColor="#0ca789" Background="Transparent" BorderWidth="1" BorderColor="#0ca789" 
+                                    CornerRadius="0" MinimumHeightRequest="0" Margin="2"/>
+                            <Button Grid.Row="2" Text="Favorito 4" TextColor="#0ca789" Background="Transparent" BorderWidth="1" BorderColor="#0ca789" 
+                                    CornerRadius="0" MinimumHeightRequest="0" Margin="2"/>
+                            <Button Grid.Row="2" Text="Favorito 6" TextColor="#0ca789" Background="Transparent" BorderWidth="1" BorderColor="#0ca789" 
+                                    CornerRadius="0" MinimumHeightRequest="0" Margin="2"/>
+                        </VerticalStackLayout>
+                    </Grid>
+
+                    <Button Grid.Row="2" Text="{x:Static fontAwesome:FASolidIcons.Plus}" FontFamily="FontAwesomeSolid" FontSize="Small" TextColor="White"
+                            Background="#0ca789" CornerRadius="0" MinimumHeightRequest="0"/>
+
+                </Grid>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</ContentView>

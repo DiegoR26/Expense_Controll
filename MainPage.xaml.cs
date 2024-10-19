@@ -16,10 +16,7 @@ namespace ExpenseControll
         {
             DisplayAlert("Alert", "O botão foi clicado!", "OK");
 
-
         }
-
-       
 
 
         private void Button_Clicked(object sender, EventArgs e)
@@ -31,7 +28,10 @@ namespace ExpenseControll
             ContentFrame.Content = new ExpenseTracker(ContentFrame);
         }
 
-
+        private void BtHome_Clicked(object sender, EventArgs e)
+        {
+            ContentFrame.Content = new MainMenu(ContentFrame);
+        }
     }
 
 }
