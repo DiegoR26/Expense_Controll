@@ -10,7 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="80*"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" BackgroundColor="#0ca789">
@@ -30,8 +30,8 @@
                 BorderColor="#ebf5ee"
                 BorderWidth="1"
                 CornerRadius="5"
-                MinimumHeightRequest="0"
                 Margin="5 0 5 0"
+                MinimumHeightRequest="0"
                 Clicked="MonthSelector" />
 
             <Grid Grid.Column="2" Margin="5 0 5 0">
@@ -58,7 +58,7 @@
             CornerRadius="0">
         </Frame>
 
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" BackgroundColor="#0ca789">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -66,9 +66,17 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" Text="{x:Static fontAwesome:FABrandIcons.JediOrder}" x:Name="BtHome" FontFamily="FontAwesomeBrands" FontSize="Large" TextColor="White" Clicked="BtHome_Clicked"/>
-            <Button Grid.Column="1" Text="{x:Static fontAwesome:FARegularIcons.Hourglass}" FontFamily="FontAwesomeRegular" FontSize="Large" TextColor="White" Clicked="ExpenseTrackerClicked"/>
-            <Button Grid.Column="2" Text="{x:Static fontAwesome:FASolidIcons.House}" FontFamily="FontAwesomeSolid" FontSize="Large" TextColor="White" Clicked="Button_Clicked"/>
+            <Button Grid.Column="0" Text="{x:Static fontAwesome:FABrandIcons.JediOrder}" x:Name="BtHome" 
+                    FontFamily="FontAwesomeBrands" FontSize="Large" TextColor="White" Clicked="BtHome_Clicked">
+            </Button>
+            
+            <Button Grid.Column="1" Text="{x:Static fontAwesome:FARegularIcons.Hourglass}" 
+                    FontFamily="FontAwesomeRegular" FontSize="Large" TextColor="White" Clicked="ExpenseTrackerClicked">
+            </Button>
+
+            <Button Grid.Column="2" Text="{x:Static fontAwesome:FASolidIcons.House}" 
+                    FontFamily="FontAwesomeSolid" FontSize="Large" TextColor="White" Clicked="Button_Clicked">
+            </Button>
         </Grid>
 
     </Grid>
