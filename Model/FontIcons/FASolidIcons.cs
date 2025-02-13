@@ -17,7 +17,7 @@ namespace Model.FontIcons
         public const string Plus = "\u002b";
         public const string Hyphen = "\u002d";
         public const string LessThan = "\u003c";
-        public const string Equals = "\u003d";
+        public const string Equalss = "\u003d";
         public const string GreaterThan = "\u003e";
         public const string Question = "\u003f";
         public const string At = "\u0040";

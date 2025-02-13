@@ -3,80 +3,116 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:fontAwesome="clr-namespace:Model.FontIcons"
              x:Class="ExpenseControll.MainPage"
-             BackgroundColor="#ebf5ee">
+             BackgroundColor="#2e2e2e">
 
-
-    <Grid>
+    <!--Main grid-->
+    <Grid Margin="0" Padding="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="11*"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0" BackgroundColor="#0ca789">
+
+        <!--Header-->
+        <Grid Grid.Row="0" BackgroundColor="#1f1f1f">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="30*"/>
-                <ColumnDefinition Width="40*"/>
-                <ColumnDefinition Width="30*"/>
+                <ColumnDefinition Width="20*"/>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="20*"/>
             </Grid.ColumnDefinitions>
+            <Label Grid.Column="0"
+                   Text="{x:Static fontAwesome:FABrandIcons.GalacticSenate}" 
+                   FontFamily="FontAwesomeBrands"
+                   FontSize="35"
+                   TextColor="#ebf5ee"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+                   <!--The next Label needs bindable property to month definition-->
+            <Label Grid.Column="1"
+                   Text="Fevereiro"
+                   FontFamily="OpenSans"
+                   TextColor="#ebf5ee"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"/>
+            <Button Grid.Column="2"
+                    x:Name="monthButton"
+                    Text="{x:Static fontAwesome:FARegularIcons.Calendar}" 
+                    FontFamily="FontAwesomeRegular"
+                    FontSize="20"
+                    BackgroundColor="Transparent"
+                    TextColor="#ebf5ee"
+                    BorderColor="#3f3f3f"
+                    BorderWidth="1"
+                    Margin="5, 0, 5, 0"
+                    MinimumHeightRequest="0">
 
-            <Button
-                Grid.Column="1"
-                x:Name="monthButton"
-                Text="Month"
-                FontSize="20"
-                BackgroundColor="Transparent"
-                TextColor="#ebf5ee"
-                BorderColor="#ebf5ee"
-                BorderWidth="1"
-                CornerRadius="5"
-                Margin="5 0 5 0"
-                MinimumHeightRequest="0"
-                Clicked="MonthSelector" />
+            </Button>
 
-            <Grid Grid.Column="2" Margin="5 0 5 0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="70*"/>
-                    <RowDefinition Height="30*"/>
-                </Grid.RowDefinitions>
-
-                <Button Grid.Row="0" Text="{x:Static fontAwesome:FARegularIcons.CircleUser}" FontFamily="FontAwesomeSolid" FontSize="Large" TextColor="White"
-                        Background="Transparent" CornerRadius="0" MinimumHeightRequest="0"/>
-
-                <Label Grid.Row="1" Text="User name" HorizontalTextAlignment="Center"/>
-
-            </Grid>
 
         </Grid>
 
-        <Frame
-            Grid.Row="1"
-            x:Name="ContentFrame"
-            Padding="0"
-            BorderColor="Transparent"
-            Background="#ebf5ee"
-            CornerRadius="0">
-        </Frame>
+        <!--Main Content-->
+        <Grid Grid.Row="1" Margin="0,5,0,0">
+            <Grid.RowDefinitions>
+                <!--Page Title-->
+                <RowDefinition Height="6*"/>
+                <!-- Horizontal Scrollable menu -->
+                <RowDefinition Height="18*"/>
+                <!-- Screen content -->
+                <RowDefinition Height="76*"/>
+            </Grid.RowDefinitions>
 
-        <Grid Grid.Row="2" BackgroundColor="#0ca789">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-
-            <Button Grid.Column="0" Text="{x:Static fontAwesome:FABrandIcons.JediOrder}" x:Name="BtHome" 
-                    FontFamily="FontAwesomeBrands" FontSize="Large" TextColor="White" Clicked="BtHome_Clicked">
-            </Button>
+            <Rectangle Grid.Row="0" Background="#1f1f1f"/>
             
-            <Button Grid.Column="1" Text="{x:Static fontAwesome:FARegularIcons.Hourglass}" 
-                    FontFamily="FontAwesomeRegular" FontSize="Large" TextColor="White" Clicked="ExpenseTrackerClicked">
+            <Label Text="Expense Controll" FontSize="Medium"/>
+
+            <Frame Grid.Row="1"
+                   x:Name="ScrollableMenuFrame"
+                   Padding="0"
+                   BorderColor="Transparent"
+                   Background="#2e2e2e"
+                   CornerRadius="0">
+                
+            </Frame>
+
+
+
+
+
+            <Frame Grid.Row="2"
+                   x:Name="MainContentFrame"
+                   Padding="0"
+                   BorderColor="Transparent"
+                   Background="#3f3f3f"
+                   CornerRadius="0">
+            </Frame>
+
+        </Grid>
+        
+        
+        <!--Footer-->
+        
+        <Grid Grid.Row="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+
+
+            <Rectangle Grid.Row="1" Background="#1f1f1f" VerticalOptions="End"/>
+            <Button Grid.Row="0" Text="{x:Static fontAwesome:FASolidIcons.Plus}" x:Name="plusBt" 
+                    VerticalOptions="Start"
+                    MaximumWidthRequest="80" MaximumHeightRequest="80" CornerRadius="50"
+                    MinimumWidthRequest="80" MinimumHeightRequest="80"
+                    Grid.RowSpan="2"
+                    Padding="0"
+                    Margin="0"
+                    FontFamily="FontAwesome" FontSize="50" TextColor="White">
+
             </Button>
 
-            <Button Grid.Column="2" Text="{x:Static fontAwesome:FASolidIcons.House}" 
-                    FontFamily="FontAwesomeSolid" FontSize="Large" TextColor="White" Clicked="Button_Clicked">
-            </Button>
+
         </Grid>
 
     </Grid>

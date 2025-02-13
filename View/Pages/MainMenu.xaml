@@ -12,7 +12,7 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" x:Name="MovementsDisplay" Background="#0ca789">
-            <Label Text="Movimentação" VerticalOptions="Center" FontAttributes="Bold" Margin="0 0 0 10"/>
+            <Label Text="Movimentação" VerticalOptions="Center" FontAttributes="Bold" Margin="0, 0, 0, 10"/>
         </Grid>
 
         <ScrollView Grid.Row="1" x:Name="MovementsListDisplay">
@@ -27,7 +27,7 @@
             </Grid.ColumnDefinitions>
 
             <HorizontalStackLayout Grid.Column="0" VerticalOptions="Center">
-                <Label Text="Lançamentos" VerticalOptions="Center" FontAttributes="Bold" Margin="0 0 0 10"/>
+                <Label Text="Lançamentos" VerticalOptions="Center" FontAttributes="Bold" Margin="0, 0, 0, 10"/>
             </HorizontalStackLayout>
 
             <Button Grid.Column="1" Text="{x:Static fontAwesome:FASolidIcons.Gear}" FontFamily="FontAwesomeSolid" FontSize="Small" TextColor="White"

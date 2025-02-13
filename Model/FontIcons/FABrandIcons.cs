@@ -27,7 +27,7 @@ namespace Model.FontIcons
         public const string _8 = "\u0038";
         public const string _9 = "\u0039";
         public const string LessThan = "\u003c";
-        public const string Equals = "\u003d";
+        public const string Equalss = "\u003d";
         public const string GreaterThan = "\u003e";
         public const string Question = "\u003f";
         public const string At = "\u0040";

@@ -1,36 +1,27 @@
-﻿using Data;
-using Model;
-using ExpenseControll.View.Pages;
+﻿using ExpenseControll.View.Elements;
 
 namespace ExpenseControll
+
 {
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-           
-        }
+            InitializeMenu();
+            InitializeMainFrame();
 
-        private void MonthSelector (object sender, EventArgs e)
-        {
-            DisplayAlert("Alert", "O botão foi clicado!", "OK");
 
         }
 
-
-        private void Button_Clicked(object sender, EventArgs e)
+    
+        private void InitializeMenu ()
         {
-            ContentFrame.Content = new NewContent1(ContentFrame);
+            ScrollableMenuFrame.Content = new HorizontalScrollableMenu();
         }
-        private void ExpenseTrackerClicked(object sender, EventArgs e)
+        private void InitializeMainFrame()
         {
-            ContentFrame.Content = new ExpenseTracker(ContentFrame);
-        }
-
-        private void BtHome_Clicked(object sender, EventArgs e)
-        {
-            ContentFrame.Content = new MainMenu(ContentFrame);
+            MainContentFrame.Content = new MainFrame();
         }
     }
 

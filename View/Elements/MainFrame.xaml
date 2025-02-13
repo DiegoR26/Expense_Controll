@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpenseControll.View.Elements.MainFrame">
+    <Grid Background="#3f3f3f">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        
+        <Rectangle Background="#1f1f1f"
+                   Grid.Row="0"/>
+        
+        <Label Text="Movimentação"
+               FontSize="Medium"
+               Grid.Row="0"/>
+        <Rectangle Background="#2e2e2e"
+              Grid.Row="1"/>     
+        <Rectangle Background="#1f1f1f"
+              Grid.Row="2"/>
+        <ListView Grid.Row="1"
+                  x:Name="TransactionList"
+                  VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="True"
+                  Margin="2,8,0,10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame  CornerRadius="0"
+                                Padding="0"
+                                BackgroundColor="Transparent">
+                            <Grid  Padding="10"
+                                   ColumnDefinitions="*,Auto"
+                                   VerticalOptions="Center"
+                                   BindingContext="{Binding .}">
+                                <Label Grid.Column="0"
+                                       Text="{Binding Date}"
+                                       FontSize="Small"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"
+                                       Margin="10,0,0,0"/>
+
+                                <Label Grid.Column="0"
+                                       Text="{Binding Amount, StringFormat='R$ {0:F2}'}"
+                                       FontSize="Small"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       Margin="10,0,0,0"/>
+
+                                <Label Grid.Column="0"
+                                       Text="{Binding Description}"
+                                       FontSize="Small"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="End"
+                                       Margin="10,0,0,0"/>
+
+
+                            </Grid>
+                        </Frame>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <Rectangle Background="#2e2e2e"
+              Grid.Row="3"/>
+
+
+
+
+    </Grid>
+</ContentView>

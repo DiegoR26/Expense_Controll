@@ -57,10 +57,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="ViewElements\**" />
+	  <Compile Remove="ViewElements\**" />
+	  <EmbeddedResource Remove="ViewElements\**" />
+	  <MauiCss Remove="ViewElements\**" />
+	  <MauiXaml Remove="ViewElements\**" />
+	  <None Remove="ViewElements\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="View\Elements\NewPage1.xaml.cs" />
 	  <Compile Remove="View\Pages\NewPage1.xaml.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Remove="View\Elements\NewPage1.xaml" />
 	  <MauiXaml Remove="View\Pages\GeneralContent.xaml" />
 	  <MauiXaml Remove="View\Pages\NewPage1.xaml" />
 	</ItemGroup>
@@ -80,6 +91,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="View\Elements\MainFrame.xaml.cs">
+	    <DependentUpon>MainFrame.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="View\Elements\HorizontalScrollableMenu.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Elements\HorizontalScrollButton.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Elements\MainFrame.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Elements\TrackerLogView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
