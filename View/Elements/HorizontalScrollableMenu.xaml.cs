@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using ExpenseControll.Model;
 
 namespace ExpenseControll.View.Elements
 {
@@ -6,26 +7,18 @@ namespace ExpenseControll.View.Elements
     {
         public ObservableCollection<MenuItemModel> MenuItems { get; set; }
 
-        public HorizontalScrollableMenu()
+        public HorizontalScrollableMenu(IEnumerable<MenuItemModel> items)
         {
             InitializeComponent();
 
-            MenuItems = new ObservableCollection<MenuItemModel>
-            {
-                new MenuItemModel { ButtonText = "\uf4c0", LabelText = "Movimentações" },
-                new MenuItemModel { ButtonText = "\uf515", LabelText = "Balanço" },
-                new MenuItemModel { ButtonText = "\ue528", LabelText = "Lançamentos" },
-                new MenuItemModel { ButtonText = "\uf54a", LabelText = "Ajustes" }
-            };
 
+            MenuItems = new ObservableCollection<MenuItemModel>(items);
+           
 
             BindingContext = this;
         }
 
-        public class MenuItemModel
-        {
-            public string ButtonText { get; set; }
-            public string LabelText { get; set; }
-        }
+       
     }
 }
+

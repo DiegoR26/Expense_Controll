@@ -108,7 +108,8 @@
                     Grid.RowSpan="2"
                     Padding="0"
                     Margin="0"
-                    FontFamily="FontAwesome" FontSize="50" TextColor="White">
+                    FontFamily="FontAwesome" FontSize="50" TextColor="White"
+                    Clicked="AddTransactionButton">
 
             </Button>
 

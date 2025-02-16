@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpenseControll.View.Pages.TransactionEditorPage"
+             Title="TransactionEditorPage">
+    
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <!--Page Title-->
+            <RowDefinition Height="6*"/>
+            <!-- Horizontal Scrollable menu -->
+            <RowDefinition Height="18*"/>
+            <!-- Screen content -->
+            <RowDefinition Height="76*"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.Row="0" Background="#1f1f1f"/>
+
+        <Label Text="Expense Controll" FontSize="Medium"/>
+
+        
+        
+
+        <Frame Grid.Row="1"
+               x:Name="ScrollableMenuFrame"
+               Padding="0"
+               BorderColor="Transparent"
+               Background="#2e2e2e"
+               CornerRadius="0">
+
+        </Frame>
+
+        <Grid Grid.Row="2" BackgroundColor="#2e2e2e">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition  Height="100*"/>
+                <RowDefinition  Height="60"/>
+              
+            </Grid.RowDefinitions>
+
+            <Rectangle Background="#1f1f1f"
+                       Grid.Row="0"/>
+
+            <Label Text="Lançamentos"
+                   FontSize="Medium"
+                   Grid.Row="0"/>
+
+            <Grid Grid.Row="1"
+                  ColumnDefinitions="0.3*,*"
+                  Margin="10"
+                  HorizontalOptions="Center">
+               
+                <Label Text="R$"
+                       FontSize="40"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"/>
+                <Entry Grid.Column="1"
+                       Placeholder="0,00"
+                       Keyboard="Numeric"
+                       TextChanged="OnEntryChanged"
+                       FontSize="38"
+                       WidthRequest="320"
+                       HorizontalOptions="Start"/>
+                
+            </Grid>
+
+            <Grid Grid.Row="2"
+                  WidthRequest="400"
+                  RowDefinitions="*,*,*,*,*">
+
+                <Grid Grid.Row="0"
+                      ColumnDefinitions="45,120,100,130"
+                      HorizontalOptions="Center">
+
+                    <Label Grid.Column="0"
+                           Text="Data"
+                           FontSize="17"                           
+                           WidthRequest="40"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"/>
+                    
+                    <DatePicker Grid.Column="1"
+                                FontSize="17"
+                                Format="dd/MM/yy"/>
+                    <Label Grid.Column="2"
+                           Text="Competência"
+                           VerticalOptions="Center"/>
+                    <Picker x:Name="MonthPicker"
+                            Grid.Column="3"  
+                            FontSize="17"
+                            HeightRequest="10"
+                            WidthRequest="130"/>
+
+
+                </Grid>
+
+
+                <Grid Grid.Row="1"
+                      ColumnDefinitions="80,315"
+                      HorizontalOptions="Center"
+                      ColumnSpacing="0">
+              
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           Text="Conta"
+                           FontSize="17"                           
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"/>
+                    <Picker x:Name="AccountPicker"
+                        Grid.Row="1"  
+                        Grid.Column="1"  
+                        FontSize="17"
+                        HeightRequest="10"/>
+                </Grid>
+                
+                
+                <Grid Grid.Row="2"
+                      ColumnDefinitions="*,*"
+                      HorizontalOptions="Fill"
+                      Margin="15,0,15,0"
+                      Padding="15">
+                    <Button x:Name="InputFlowsButton" 
+                            Grid.Column="0" 
+                            StyleId="0"
+                            Text="Entrada"
+                            TextColor="#dae4dd" 
+                            Clicked="FlowButton">
+                        <Button.Shadow>
+                            <Shadow Brush="#dae4dd"
+                                    Offset="0,3"
+                                    Radius="2"/>
+                        </Button.Shadow>
+                        <Button.Clip>
+                            <RoundRectangleGeometry Rect="0,0,170,60"
+                             CornerRadius="20,0,20,0"/>
+                        </Button.Clip>
+
+                    </Button>
+
+
+                    <Button x:Name="OutputFlowsButton" 
+                            Grid.Column="1"
+                            StyleId="1"
+                            Text="Saída"
+                            TextColor="#dae4dd"                             
+                            Clicked="FlowButton">
+                        <Button.Shadow>
+                            <Shadow Brush="#dae4dd"
+                                    Offset="0,3"
+                                    Radius="2"/>
+                        </Button.Shadow>
+                        <Button.Clip>
+                            <RoundRectangleGeometry Rect="0,0,170,60"
+                                                    CornerRadius="0,20,0,20"/> 
+                         </Button.Clip>
+                        
+                    </Button>
+
+
+                </Grid>
+
+                <Grid Grid.Row="3"
+                      ColumnDefinitions="80,315"
+                      HorizontalOptions="Center"
+                      ColumnSpacing="0">
+
+                    <Label Grid.Row="1"
+                           Grid.Column="0"
+                           Text="Categoria"
+                           FontSize="17"                           
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"/>
+                    <Picker x:Name="CategoryPicker"
+                            Grid.Row="1"  
+                            Grid.Column="1"  
+                            FontSize="17"
+                            HeightRequest="10"/>
+                </Grid>
+
+
+
+            </Grid>
+            
+            
+            
+           
+            <Button Grid.Row="3" Background="DimGray"
+                    Clicked="CloseModalButton"
+                    Text="VOLTAR"/>
+            
+            
+
+        </Grid>
+        
+        
+
+
+
+    </Grid>
+
+
+
+
+
+
+
+
+
+
+
+</ContentPage>
+    
+    
+    
+    

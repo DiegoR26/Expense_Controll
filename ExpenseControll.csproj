@@ -115,7 +115,7 @@
 	  <MauiXaml Update="View\Pages\MainMenu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Pages\NewContent1.xaml">
+	  <MauiXaml Update="View\Pages\TransactionEditorPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
