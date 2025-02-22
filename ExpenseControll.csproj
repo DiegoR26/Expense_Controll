@@ -66,11 +66,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="View\Elements\IncomeExpense.xaml.cs" />
+	  <Compile Remove="View\Elements\IncomesAndExpensesView.xaml.cs" />
+	  <Compile Remove="View\Elements\IncomesView.xaml.cs" />
 	  <Compile Remove="View\Elements\NewPage1.xaml.cs" />
 	  <Compile Remove="View\Pages\NewPage1.xaml.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Remove="View\Elements\IncomeExpense.xaml" />
+	  <MauiXaml Remove="View\Elements\IncomesAndExpensesView.xaml" />
+	  <MauiXaml Remove="View\Elements\IncomesView.xaml" />
 	  <MauiXaml Remove="View\Elements\NewPage1.xaml" />
 	  <MauiXaml Remove="View\Pages\GeneralContent.xaml" />
 	  <MauiXaml Remove="View\Pages\NewPage1.xaml" />
@@ -97,6 +103,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\Elements\ExpensesView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Elements\HorizontalScrollableMenu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

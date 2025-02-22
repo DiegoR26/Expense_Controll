@@ -22,7 +22,8 @@
                 MaximumHeightRequest="80"
                 CornerRadius="20"
                 TextColor="#1f1f1f"
-                FontSize="35"
+                FontSize="{Binding FontSize}"
+                Command="{Binding Command}"
                 Text="{Binding ButtonText}" />
         <Label Text="{Binding LabelText}" 
                Grid.Row="1"

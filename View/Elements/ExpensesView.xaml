@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpenseControll.View.Elements.ExpensesView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            
+        </Grid.RowDefinitions>
+
+
+
+        <Rectangle Grid.Row="0"/>
+        <Grid ColumnDefinitions="*,*,*">
+
+            <Label Grid.Column="0"  
+                   Margin="10,0,0,0"
+                   FontSize="Medium"
+                   Text="Nome"/>
+            <Label Grid.Column="1"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Medium"
+                   Text="Gasto"/>
+            <Label Grid.Column="2"  
+                   Margin="0,0,10,0"
+                   FontSize="Medium"
+                   HorizontalTextAlignment="End"
+                   Text="Previsto"/>
+
+
+        </Grid>
+
+        <ListView Grid.Row="1"
+            x:Name="ExpenseList"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            SeparatorVisibility="None"
+            HasUnevenRows="True"
+            Margin="2,8,0,10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame  CornerRadius="0"
+                          Padding="0"
+                          BackgroundColor="#2e2e2e">
+                            <Grid  Padding="10"
+                             ColumnDefinitions="*,Auto"
+                             VerticalOptions="Center"
+                             BindingContext="{Binding .}">
+                                <Label Grid.Column="0"
+                                 Text="{Binding ExpenseName}"
+                                 FontSize="Small"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Start"
+                                 Margin="10,0,0,0"/>
+
+                                <Label Grid.Column="0"
+                                 Text="{Binding ExpenseAmount, StringFormat='R$ {0:F2}'}"
+                                 FontSize="Small"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center"
+                                 Margin="10,0,0,0"/>
+
+                                <Label Grid.Column="0"
+                                 Text="{Binding ExpectedExpense, StringFormat='R$ {0:F2}'}"
+                                 FontSize="Small"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="End"
+                                 Margin="10,0,0,0"/>
+
+
+                            </Grid>
+                        </Frame>
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentView>

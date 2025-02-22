@@ -37,15 +37,16 @@
                    HorizontalOptions="Center"/>
             <Button Grid.Column="2"
                     x:Name="monthButton"
-                    Text="{x:Static fontAwesome:FARegularIcons.Calendar}" 
                     FontFamily="FontAwesomeRegular"
                     FontSize="20"
                     BackgroundColor="Transparent"
                     TextColor="#ebf5ee"
+                    Text="{x:Static fontAwesome:FARegularIcons.Calendar}" 
                     BorderColor="#3f3f3f"
                     BorderWidth="1"
                     Margin="5, 0, 5, 0"
-                    MinimumHeightRequest="0">
+                    MinimumHeightRequest="0"
+                    >
 
             </Button>
 
